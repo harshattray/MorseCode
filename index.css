@@ -1,0 +1,161 @@
+/**
+ * @Author: harsha
+ * @Date:   2018-06-24T15:50:25+05:30
+ * @Last modified by:   harsha
+ * @Last modified time: 2018-06-24T16:31:55+05:30
+ */
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+ .container{
+ 	display: flex;
+ 	align-items: center;
+ }
+ .textTop{
+   color: #332E2B;
+ }
+
+ .switch-container{
+ 	width: 90%;
+ 	height: 50px;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: space-between;
+ 	margin-bottom: 10px;
+ }
+
+ .label{
+ 	color: #332E2B;
+ 	margin-left: 10px;
+ }
+
+ #text{
+ 	width: 90%;
+ 	color: #332E2B;
+ 	font-size: 29px;
+ }
+
+ .circle{
+ 	border-radius: 50%;
+ 	margin-left: 3px;
+ 	background-color: yellow;
+ 	width: 15px;
+ 	height: 15px;
+ }
+
+ .dash{
+ 	background-color: #EEEEEE;
+ 	margin-left: 3px;
+ 	width: 15px;
+ 	height: 7px;
+ }
+
+ #res{
+ 	width: 90%;
+ 	display: flex;
+ 	align-items: center;
+ 	flex-wrap: wrap;
+ }
+
+ #input{
+ 	font-family: 'Roboto', sans-serif;
+ 	color: black;
+ 	font-size: 20px;
+ 	background-color: #CAB1B9;
+ 	padding: 5px 15px 5px 15px;
+ 	box-sizing: border-box;
+ 	width: 90%;
+ 	margin-bottom: 15px;
+ 	border: 1px solid transparent;
+ 	resize: none;
+ 	overflow: hidden;
+ 	border-radius: 5px;
+ }
+
+ body{
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	flex-direction: column;
+ 	background-color: #FA6B08;
+ 	font-family: 'Roboto', sans-serif;
+ }
+
+ .whitespace{
+ 	width: 15px;
+ }
+
+ h1{
+ 	color: #FDE3A7;
+ }
+
+ .switch {
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+ }
+
+ .switch input {display:none;}
+
+ .slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #F5CEB3;
+   -webkit-transition: .4s;
+   transition: .4s;
+ }
+
+ .slider:before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: white;
+   -webkit-transition: .4s;
+   transition: .4s;
+ }
+
+ input:checked + .slider {
+   background-color: #7E6A5D;
+ }
+
+ input:focus + .slider {
+   box-shadow: 0 0 1px #2196F3;
+ }
+
+ input:checked + .slider:before {
+   -webkit-transform: translateX(26px);
+   -ms-transform: translateX(26px);
+   transform: translateX(26px);
+ }
+
+ /* Rounded sliders */
+ .slider.round {
+   border-radius: 34px;
+ }
+
+ .slider.round:before {
+   border-radius: 50%;
+ }
+
+ .copy{
+ 	height: 50px;
+ 	border: none;
+ 	background-color: #121111;
+ 	cursor: pointer;
+ 	font-size: 15px;
+ 	font-weight: bold;
+ 	color: white;
+ 	border-radius: 5px;
+ 	transition: all 1000ms linear;
+ }
+
+ .copy:hover{
+ 	background-color: #F78A08;
+ }

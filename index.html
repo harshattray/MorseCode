@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Morse Generator</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<h1 class="textTop">Start typing and your text will turn into morse code</h1>
+		<div class="switch-container">
+			<div class="container">
+				<label class="switch">
+					<input id="checkbox"type="checkbox" checked>
+					<span class="slider round"></span>
+				</label>
+				<label id="label" class="label">Text to morse code</label>
+			</div>
+			<button id="playButton" class="copy" name="code">
+				Play Generated Morse Code
+			</button>
+			<button id="copybutton" class="copy" name="code">
+				Copy generated Morse Code
+			</button>
+		</div>
+		<textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Start Typing" name="" id="input" cols="30" rows="10"></textarea>
+
+		<div id="res"></div>
+		<div id="text"></div>
+		<script src="morse.js" charset="utf-8"></script>
+	</body>
+</html>
