@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2018-06-24T15:50:53+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2018-06-24T16:23:23+05:30
+ * @Last modified time: 2018-07-13T12:18:01+05:30
  */
 var checked = true;
 var morseOutput = [];
@@ -62,13 +62,19 @@ document.getElementById('checkbox').addEventListener('change', function() {
 	checked = this.checked;
 	const label = document.getElementById('label');
 	const copyButton = document.getElementById('copybutton');
+	const morseResultStack = document.getElementById('morseres');
+	const textResultStack = document.getElementById('textres');
 	if (checked) {
 		label.innerHTML = 'Text to morse code';
 		copyButton.style.display = '';
+		morseResultStack.style.display =''
+		textResultStack.style.display = 'none';
 	} else {
 		label.innerHTML =
 			'Morse code to text (please use space between each character)';
 		copyButton.style.display = 'none';
+		morseResultStack.style.display ='none'
+		textResultStack.style.display = '';
 	}
 	document.getElementById('input').value = '';
 	document.getElementById('res').innerHTML = '';
