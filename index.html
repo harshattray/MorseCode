@@ -7,9 +7,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Morse Generator</title>
 		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
 	</head>
 	<body>
 		<h1 class="textTop">Start typing and your text will turn into morse code</h1>
+		<div class="ui compact menu">
+		  <a class="item copy" id="playButton" name="code">
+		    <i class="bullhorn icon"></i>
+				Play Generated Morse Code
+		  </a>
+		  <a class="item" id="copybutton" class="copy" name="code">
+		    <i class="clipboard icon "></i>
+				Copy generated Morse Code
+		  </a>
+		</div>
 		<div class="switch-container">
 			<div class="container">
 				<label class="switch">
@@ -18,17 +30,17 @@
 				</label>
 				<label id="label" class="label">Text to morse code</label>
 			</div>
-			<button id="playButton" class="copy" name="code">
-				Play Generated Morse Code
-			</button>
-			<button id="copybutton" class="copy" name="code">
-				Copy generated Morse Code
-			</button>
 		</div>
 		<textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Start Typing" name="" id="input" cols="30" rows="10"></textarea>
 
-		<div id="res"></div>
-		<div id="text"></div>
+		<div class="ui compact segment">
+			<p>Morse Code from text</p>
+			<div id="res"></div>
+    </div>
+		<div class="ui compact segment">
+			<p>Text from Morse Code</p>
+			<div id="text"></div>
+    </div>
 		<script src="morse.js" charset="utf-8"></script>
 	</body>
 </html>

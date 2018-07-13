@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2018-06-24T15:50:25+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2018-06-24T16:31:55+05:30
+ * @Last modified time: 2018-07-13T11:29:56+05:30
  */
  @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -37,13 +37,13 @@
  .circle{
  	border-radius: 50%;
  	margin-left: 3px;
- 	background-color: yellow;
+ 	background-color: blue;
  	width: 15px;
  	height: 15px;
  }
 
  .dash{
- 	background-color: #EEEEEE;
+ 	background-color: black;
  	margin-left: 3px;
  	width: 15px;
  	height: 7px;
@@ -76,7 +76,7 @@
  	align-items: center;
  	justify-content: center;
  	flex-direction: column;
- 	background-color: #FA6B08;
+ 	background-color: white;
  	font-family: 'Roboto', sans-serif;
  }
 
