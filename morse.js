@@ -2,11 +2,10 @@
  * @Author: harsha
  * @Date:   2018-06-24T15:50:53+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2018-07-13T12:19:16+05:30
+ * @Last modified time: 2018-07-13T22:03:08+05:30
  */
 var checked = true;
 var morseOutput = [];
-console.log(document.getElementById("input"));
 document.getElementById("input").addEventListener("input", function() {
   if (checked) {
     textToMorse(this.value.toLowerCase());
@@ -15,6 +14,11 @@ document.getElementById("input").addEventListener("input", function() {
   }
 });
 
+/**
+ * [morseToText Converts morse code to text]
+ * @param  {[type]} value [Input value]
+ * @return {[type]}       [description]
+ */
 function morseToText(value) {
   const text = document.getElementById("text");
   text.innerHTML = "";
@@ -22,8 +26,8 @@ function morseToText(value) {
     .split(" ")
     .map(function(v) {
       if (v === "") return " ";
-      for (var i in morse) {
-        if (morse[i] === v) {
+      for (var i in morse_mapper) {
+        if (morse_mapper[i] === v) {
           return i;
         }
       }
@@ -34,15 +38,20 @@ function morseToText(value) {
   document.getElementById("text").innerHTML = output.join("");
 }
 
+/**
+ * [textToMorse Converts text to morse]
+ * @param  {[type]} value [Text as input]
+ * @return {[type]}       [description]
+ */
 function textToMorse(value) {
   const res = document.getElementById("res");
   res.innerHTML = "";
   let output = "";
   morseOutput = [];
   for (var i in value) {
-    if (morse[value[i]]) {
-      output += morse[value[i]];
-      morseOutput.push(morse[value[i]]);
+    if (morse_mapper[value[i]]) {
+      output += morse_mapper[value[i]];
+      morseOutput.push(morse_mapper[value[i]]);
     }
   }
   for (var i in output) {
@@ -91,7 +100,12 @@ document.getElementById("copybutton").addEventListener("click", function() {
   document.body.removeChild(dummy);
 });
 
-var morse = {
+/**
+ * [morse Morse mapper object]
+ * @type {Object}
+ */
+
+var morse_mapper = {
   " ": "  ",
   "0": "-----",
   "1": ".----",
@@ -141,6 +155,10 @@ var morse = {
   "'": ".-..-."
 };
 
+/**
+ * [AudioContext AudioContext fetch]
+ * @type {[type]}
+ */
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var ctx = new AudioContext();
 var dot = 1.2 / 15;
